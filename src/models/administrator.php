@@ -6,16 +6,18 @@ function getPdoConnect(){
     return $pdo;
 }
 
-function getAdminFromLogin($firstName, $password){
+function getAdminFromLogin($firstName,$password){
     $pdo = getPdoConnect();
 
-    $stmt = $pdo->prepare('SELECT firstName, password FROM administrators WHERE firstName = :firstName AND password = :password');
+    $stmt = $pdo->prepare('SELECT firstName, password FROM administrators WHERE firstName = :firstName');
     $stmt->bindParam(':firstName', $firstName);
-    $stmt->bindParam(':password', $password);
-    $res = $stmt->execute();
-    if($res){
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }else{
+    $stmt->execute();
+    $res = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($res && (password_verify($password, $res['password']))) 
+    {
+        return true;
+    }
+    else {
         return false;
     }
 }
@@ -25,7 +27,7 @@ function getAdminList()
     try {
         $pdo = getPdoConnect();
 
-        return $pdo->query('SELECT id_admin, firstName, lastName, email, phone, password FROM administrators  ORDER BY create_time DESC;');
+        return $pdo->query('SELECT id_admin, firstName, lastName, email, phone FROM administrators ORDER BY create_time DESC;');
 
     } catch (\PDOException $messageErrorConnection) {
 

@@ -12,24 +12,25 @@ ob_start();
             <img src="public/img/<?=$bottle['picture'] ?>" alt="picture">
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingName" value="<?=$bottle['name'] ?>" name="name" placeholder="Nom">
-            <label for="floatingName">Nom</label>
+            <input type="text" class="form-control" id="floatingName" value="<?=$bottle['name'] ?>" name="name" placeholder="Nom" required>
+            <label for="floatingName">Nom<span style="color: red;"> *</span></label>
         </div>
         <div class="form-floating">
-            <input type="number" class="form-control" id="floatingSite" value="<?=$bottle['year'] ?>" name="year" placeholder="année">
-            <label for="floatingSite">Année</label>
+            <input type="number" class="form-control" id="floatingSite" value="<?=$bottle['year'] ?>" name="year" placeholder="année" required>
+            <label for="floatingSite">Année<span style="color: red;"> *</span></label>
         </div>
+        <?php if (isset($ErrorYear)) {echo "$ErrorYear";} ?>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingName" value="<?=$bottle['grapes'] ?>" name="grapes" placeholder="grapes">
             <label for="floatingName">grapes</label>
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingSite" value="<?=$bottle['country'] ?>" name="country" placeholder="pays">
-            <label for="floatingSite">pays</label>
+            <input type="text" class="form-control" id="floatingSite" value="<?=$bottle['country'] ?>" name="country" placeholder="pays" required>
+            <label for="floatingSite">pays<span style="color: red;"> *</span></label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingName" value="<?=$bottle['region'] ?>" name="region" placeholder="région">
-            <label for="floatingName">région</label>
+            <input type="text" class="form-control" id="floatingName" value="<?=$bottle['region'] ?>" name="region" placeholder="région" required>
+            <label for="floatingName">région<span style="color: red;"> *</span></label>
         </div>
         <div class="form-floating mt-3">
             <textarea class="form-control" placeholder="Description" id="floatingDescription" value="<?=$bottle['description']?>" name="description"
@@ -38,9 +39,11 @@ ob_start();
         </div>
         <div class="mt-3">
             <label for="image" class="form-label">Changer l'image</label>
-            <input class="form-control" type="file" id="image" name="image">
+            <input class="form-control" type="file" id="image" name="imageBottel">
         </div>
-
+        <?php if (isset($ErrorExtension)) {echo "$ErrorExtension";} ?>
+        <?php if (isset($ErrorSize)) {echo "$ErrorSize";} ?>
+        <?php if (isset($ErrorUpload)) {echo "$ErrorUpload";} ?>
         <button type="submit" name="modifier" class="btn btn-primary mt-3">Modifier</button>
     </form>
 </div>

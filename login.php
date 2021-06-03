@@ -1,9 +1,12 @@
 <?php
 require_once('src/controllers/login.php');
-ob_start(); 
+ob_start();
+if(isset($ErrorMessage)){
+   echo $ErrorMessage ;
+}
 ?>
 <br>
-<div class="row m-4">
+<div class="row m-2">
   <div class="col-md-6">
     <img src="public\img\img_key\key_picture.gif" alt="key-picture">
   </div>
@@ -15,10 +18,9 @@ ob_start();
                 <label for="name">Nom</label>
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                <input type="password" class="form-control" id="password" name="password">
                 <label for="password">Mot de passe</label>
               </div>
-
               <button type="submit" name="login" class="btn btn-primary mt-3"><i class="bi bi-door-open"></i> Se connecter</button>
         </form>
     </div>

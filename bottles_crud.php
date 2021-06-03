@@ -25,7 +25,7 @@ ob_start();
         <div class="col-md-10 p">
             <div class="row">
                 <div class="col-md-3 p-1">    
-                    <img src="public/img/<?=$bottle['picture']?>" class="mx-auto d-block rounded" alt="wine-picture">
+                    <img src="public/img/<?=$bottle['picture']?>" class="mx-auto d-block rounded" style="max-width:200px;" alt="wine-picture">
                 </div>
                 <div class="col-md-9 pt-1 bg-primary">
                     <ul class="list-group">

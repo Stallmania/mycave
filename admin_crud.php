@@ -5,7 +5,6 @@ $pageTitle = 'Liste des Administrateurs';
 require_once('src/models/administrator.php');
 $admins = getAdminList();
 $JustOneAdmin = false;
-
 ?>
 
 <div>
@@ -19,7 +18,6 @@ $JustOneAdmin = false;
                 <li class="list-group-item"><strong>Prénom </strong><?= $admin['lastName'] ?></li>
                 <li class="list-group-item"><strong>Email </strong><?= $admin['email'] ?></li>
                 <li class="list-group-item"><strong>Tél </strong><?= $admin['phone'] ?></li>
-                <li class="list-group-item"><strong>Mot de passe </strong><?= $admin['password'] ?></li>
             </ul>
         </div>
         <div class="col-md-6" >
