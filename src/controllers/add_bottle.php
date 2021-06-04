@@ -25,6 +25,8 @@ if (isset($_POST['save'])) {
 
     if($picture['name'] == ''){
         $picture['name'] = 'generic.jpg';
+    }else {
+        $picture['name'] = uniqid() . $picture['name'];
     }
 
     if (validatingImageExtension($picture) === false) {
@@ -36,6 +38,7 @@ if (isset($_POST['save'])) {
     if (validatingImageUpload($picture) === false){
         return $ErrorUpload = '<span style="color:red;">Une erreur s\'est produite lors du téléchargement du fichier, merci de renouveler votre envoi</span>'; 
     }
+    
     $bottleValues = [
         'name' => ScriptingTesting($name),
         'year' => ScriptingTesting($year),

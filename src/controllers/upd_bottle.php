@@ -39,8 +39,9 @@ if (isset($_POST['modifier'])) {
 
     if ($picture['name'] == '') {
         $picture['name'] = $bottle['picture'];
+    }else {
+        $picture['name'] = uniqid() . $picture['name'];
     }
-    
     $bottleValues = [
         'name' => $_POST['name'],
         'year' => $_POST['year'],

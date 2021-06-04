@@ -4,7 +4,9 @@ require_once('src/controllers/add_bottle.php');
 
 ob_start();
 ?>
-
+<span class="">
+    <a href="bottles_crud.php" class="btn btn-light m-1">Retour à l'édition des bouteilles</a>
+</span>
 <div class="card p-3">
     <h1 class="text-primary text-uppercase">Ajouter une bouteille</h1>
     <form action="add_bottle.php" method="post" enctype="multipart/form-data">

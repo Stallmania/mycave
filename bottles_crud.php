@@ -10,15 +10,10 @@ $pages = nbOfPages();
 $currentPageOfBottles = currentPage();
 ob_start();
 ?>
-<span class="sticky-top">
-    <a href="add_bottle.php" class="btn btn-primary m-1">Ajouter une bouteille</a>
-</span>
 
-<span class="">
-    <a href="admin_crud.php" class="btn btn-dark m-1">Gestion des administrateurs</a>
-</span>
+<a href="add_bottle.php" class="btn btn-primary m-1 sticky-top" style="border: 1px solid white ;">Ajouter une bouteille</a>
 
-
+<a href="admin_crud.php" class="btn btn-dark m-1">Gestion des administrateurs</a>
 
 <?php foreach ($bottles as $key=>$bottle) : ?>
     <div class="row bg-primary mb-3 p-1">

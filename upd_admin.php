@@ -4,6 +4,9 @@ require_once('src/controllers/upd_admin.php');
 
 ob_start();
 ?>
+<span class="">
+    <a href="admin_crud.php" class="btn btn-light m-1">Retour à l'édition des administrateurs</a>
+</span>
 <div class="card p-3">
     <h1 class="text-primary text-uppercase">modifier les informations d'un administrateur</h1>
     <form action="upd_admin.php?id_admin=<?=$admin['id_admin'] ?>" method="post" enctype="multipart/form-data">
@@ -22,7 +25,7 @@ ob_start();
         </div>
         <?php if (isset($ErrorEmail)) {echo "$ErrorEmail";} ?>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingSite" value="<?=$admin['phone'] ?>" name="phone" required>
+            <input type="tel" class="form-control" id="floatingSite" value="<?=$admin['phone'] ?>" name="phone" required>
             <label for="floatingSite">Tél.</label>
         </div>
         <?php if (isset($ErrorTel)) {echo "$ErrorTel";} ?>

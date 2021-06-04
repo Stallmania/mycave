@@ -23,6 +23,8 @@ if(isset($_POST['modifier'])){
 
     if (validatingPhone($phone) === false) {
         return $ErrorTel = '<span style="color:red;">numéro de téléphone invalide !</span>';
+    }else{
+        $phone = validatingPhone($phone);
     }
     if (validatingPassWord($pass) !== 1) {
         return $ErrorPass = '<span style="color:red;">Votre mot de passe doit comporter au moins 8 caractères, une majuscule, un caractère spécial et un chiffre</span>';

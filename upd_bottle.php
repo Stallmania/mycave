@@ -4,7 +4,9 @@ require_once('src/controllers/upd_bottle.php');
 
 ob_start();
 ?>
-
+<span class="">
+    <a href="bottles_crud.php" class="btn btn-light m-1">Retour à l'édition des bouteilles</a>
+</span>
 <div class="card p-3">
     <h1 class="text-primary text-uppercase">modifier les information sur une bouteille</h1>
     <form action="upd_bottle.php?id_bottle=<?=$bottle['id_bottle'] ?>" method="post" enctype="multipart/form-data">

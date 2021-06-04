@@ -4,7 +4,9 @@ require_once('src/controllers/add_admin.php');
 
 ob_start();
 ?>
-
+<span class="">
+    <a href="admin_crud.php" class="btn btn-light m-1">Retour à l'édition des administrateurs</a>
+</span>
 <div class="card m-4">
     <h1 class="text-primary text-uppercase p-4">Ajouter un administrateur</h1>
     <form action="add_admin.php" method="post" enctype="multipart/form-data" class="needs-validation p-2">
@@ -23,7 +25,7 @@ ob_start();
         </div>
         <?php if (isset($ErrorEmail)) {echo "$ErrorEmail";} ?>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingSiteD" name="phone" required>
+            <input type="tel" class="form-control" id="floatingSiteD" name="phone" required>
             <label for="floatingSiteD">Tél.<span style="color: red;"> *</span></label>
         </div>
         <?php if (isset($ErrorTel)) {echo "$ErrorTel";} ?>

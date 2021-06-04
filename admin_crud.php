@@ -6,9 +6,9 @@ require_once('src/models/administrator.php');
 $admins = getAdminList();
 $JustOneAdmin = false;
 ?>
-
-<div>
+<div style="display: flex; justify-content:space-between">
     <a href="add_admin.php" class="btn btn-info m-1">Ajouter un administrateur</a>
+    <a href="bottles_crud.php" class="btn btn-light m-1">Retour à l'édition des bouteilles</a>
 </div>
 <div class="row">
     <?php foreach ($admins as $key=>$admin) : ?>

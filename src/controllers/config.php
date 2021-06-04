@@ -12,10 +12,12 @@ function validatingPhone($phone){
 	$valid_number = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
 	$valid_number = str_replace("-", "", $valid_number);
 	if (strlen($valid_number) < 10 || strlen($valid_number) > 14) {
-		$valid_number = FALSE;
+		return false;
+	}else {
+		return $valid_number;
 	}
-	return $valid_number;
 }
+
 
 function validatingPassWord($password){
 	$pattern = '/^(?=.*\d+)(?=.*\W+)(?=.*[A-Z]+)(?=.*[a-z]+)[a-zA-Z\d\W]{8,}$/';
