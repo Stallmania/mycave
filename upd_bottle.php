@@ -35,8 +35,8 @@ ob_start();
             <label for="floatingName">région<span style="color: red;"> *</span></label>
         </div>
         <div class="form-floating mt-3">
-            <textarea class="form-control" placeholder="Description" id="floatingDescription" value="<?=$bottle['description']?>" name="description"
-                style="height: 100px"></textarea>
+            <textarea class="form-control" placeholder="Description" id="floatingDescription" name="description"
+                style="height: 100px"><?=$bottle['description']?></textarea>
             <label for="floatingDescription">Description</label>
         </div>
         <div class="mt-3">

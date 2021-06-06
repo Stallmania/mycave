@@ -7,12 +7,12 @@ $bottle = getDetailBottles($_GET['id_bottle']);
 
 if (isset($_POST['modifier'])) {
 
-    $name = $_POST['name'];
-    $year = $_POST['year'];
-    $grapes = $_POST['grapes'];
-    $country = $_POST['country'];
-    $region = $_POST['region'];
-    $description = $_POST['description'];
+    $name = ScriptingTesting($_POST['name']);
+    $year = ScriptingTesting($_POST['year']);
+    $grapes = ScriptingTesting($_POST['grapes']);
+    $country = ScriptingTesting($_POST['country']);
+    $region = ScriptingTesting($_POST['region']);
+    $description = ScriptingTesting($_POST['description']);
     $picture = $_FILES['imageBottel'];
 
     $fields = [$name, $year, $country, $region];
@@ -43,12 +43,12 @@ if (isset($_POST['modifier'])) {
         $picture['name'] = uniqid() . $picture['name'];
     }
     $bottleValues = [
-        'name' => $_POST['name'],
-        'year' => $_POST['year'],
-        'grapes' => $_POST['grapes'],
-        'country' => $_POST['country'],
-        'region' => $_POST['region'],
-        'description' => $_POST['description'],
+        'name' => $name,
+        'year' => $year,
+        'grapes' => $grapes,
+        'country' => $country,
+        'region' => $region,
+        'description' => $description,
         'picture' => $picture['name']
     ];
 

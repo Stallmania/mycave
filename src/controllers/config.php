@@ -32,7 +32,7 @@ function validatingBottelYear($year){
 }
 
 function validatingImageSize($picture){
-	define('MB', 1048576);// 1megabyte
+	define('MB', 1048576);// 1 megabyte
 	if($picture['size'] > MB or $picture['error'] === UPLOAD_ERR_INI_SIZE or $picture['error'] === UPLOAD_ERR_FORM_SIZE) {
         return false;
     }

@@ -6,11 +6,11 @@ require_once('src/controllers/config.php');
 $admin = getAdmin($_GET['id_admin']);
 
 if(isset($_POST['modifier'])){
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $pass = $_POST['password'];
+    $firstName = ScriptingTesting($_POST['firstName']);
+    $lastName = ScriptingTesting($_POST['lastName']);
+    $email = ScriptingTesting($_POST['email']);
+    $phone = ScriptingTesting($_POST['phone']);
+    $pass = ScriptingTesting($_POST['password']);
     
     $fields = [$firstName, $lastName, $email, $phone, $pass];
     if (in_array('',$fields)) {
@@ -31,11 +31,11 @@ if(isset($_POST['modifier'])){
     }
 
     $updateValues = [
-        'firstName' => ScriptingTesting($firstName),
-        'lastName' => ScriptingTesting($lastName),
-        'email' => ScriptingTesting($email),
-        'phone' => ScriptingTesting($phone),
-        'password' => ScriptingTesting(password_hash($pass,PASSWORD_DEFAULT))
+        'firstName' => $firstName,
+        'lastName' => $lastName,
+        'email' => $email,
+        'phone' => $phone,
+        'password' => password_hash($pass,PASSWORD_DEFAULT)
     ];
 
 

@@ -5,13 +5,13 @@ require_once('src/controllers/config.php');
 
 if (isset($_POST['save'])) {
 
-    $name = $_POST['name'];
-    $year = $_POST['year'];
-    $grapes = $_POST['grapes'];
-    $country = $_POST['country'];
-    $region = $_POST['region'];
-    $description = $_POST['description'];
-    $picture = $_FILES['imageBottel'];
+    $name = ScriptingTesting($_POST['name']);
+    $year = ScriptingTesting($_POST['year']);
+    $grapes = ScriptingTesting($_POST['grapes']);
+    $country = ScriptingTesting($_POST['country']);
+    $region = ScriptingTesting($_POST['region']);
+    $description = ScriptingTesting($_POST['description']);
+    $picture =($_FILES['imageBottel']);
 
     $fields = [$name, $year, $country, $region];
 
@@ -40,12 +40,12 @@ if (isset($_POST['save'])) {
     }
     
     $bottleValues = [
-        'name' => ScriptingTesting($name),
-        'year' => ScriptingTesting($year),
-        'grapes' => ScriptingTesting($grapes),
-        'country' => ScriptingTesting($country),
-        'region' => ScriptingTesting($region),
-        'description' => ScriptingTesting($description),
+        'name' => $name,
+        'year' => $year,
+        'grapes' => $grapes,
+        'country' => $country,
+        'region' => $region,
+        'description' => $description,
         'picture' => $picture['name']
     ];
     
