@@ -15,6 +15,7 @@ ob_start();
             <input type="text" class="form-control" id="floatingName" name="name" placeholder="Nom" required>
             <label for="floatingName">Nom<span style="color: red;"> *</span></label>
         </div>
+        <?php if (isset($ErrorNomberOfCharOfName)) {echo "$ErrorNomberOfCharOfName";} ?>
         <div class="form-floating">
             <input type="number" class="form-control" id="floatingSite" name="year" placeholder="année" required>
             <label for="floatingSite">Année<span style="color: red;"> *</span></label>
@@ -24,14 +25,17 @@ ob_start();
             <input type="text" class="form-control" id="floatingName" name="grapes" placeholder="grapes">
             <label for="floatingName">grappe</label>
         </div>
+        <?php if (isset($ErrorNomberOfCharOfGrapes)) {echo "$ErrorNomberOfCharOfGrapes";} ?>
         <div class="form-floating">
             <input type="text" class="form-control" id="floatingSite" name="country" placeholder="pays" required>
             <label for="floatingSite">pays<span style="color: red;"> *</span></label>
         </div>
+        <?php if (isset($ErrorNomberOfCharOfCountry )) {echo "$ErrorNomberOfCharOfCountry";} ?>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingName" name="region" placeholder="région" required>
             <label for="floatingName">région<span style="color: red;"> *</span></label>
         </div>
+        <?php if (isset($ErrorNomberOfCharOfRegion)) {echo "$ErrorNomberOfCharOfRegion";} ?>
         <div class="form-floating mt-3">
             <textarea class="form-control" placeholder="Description" id="floatingDescription" name="description"
                 style="height: 100px"></textarea>
@@ -42,6 +46,7 @@ ob_start();
             <input class="form-control" type="file" id="image" name="imageBottel">
             <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
         </div>
+        <?php if (isset($ErrorNomberOfCharPicture)) {echo "$ErrorNomberOfCharPicture";} ?>
         <?php if (isset($ErrorExtension)) {echo "$ErrorExtension";} ?>
         <?php if (isset($ErrorSize)) {echo "$ErrorSize";} ?>
         <?php if (isset($ErrorUpload)) {echo "$ErrorUpload";} ?>

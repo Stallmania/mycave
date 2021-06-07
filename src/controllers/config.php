@@ -1,7 +1,12 @@
 <?php
-function ScriptingTesting($string)
-{
-    return trim(htmlspecialchars($string, ENT_QUOTES));
+function ScriptingTesting($string){
+    return trim(htmlentities($string, ENT_QUOTES));
+}
+
+function validatingNomberOfChar(string $feild, int $NbOfCharAutorized = 50){
+	if (strlen($feild) > $NbOfCharAutorized) {
+		return false;
+	}
 }
 
 function validatingEmail($email){

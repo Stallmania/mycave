@@ -20,7 +20,23 @@ if (isset($_POST['modifier'])) {
     if (in_array('',$fields)) {
         return $ErrorEmptyInputField = '<span style="color:red;">Merci de compléter les champs manquants</span>';
     }
+    if (validatingNomberOfChar($name, 50) === false){
+        return $ErrorNomberOfCharOfName = '<span style="color:red;">Merci de siasir moin de 50 caractères </span>';
+    }
 
+    if (validatingNomberOfChar($grapes, 50) === false){
+        return $ErrorNomberOfCharOfGrapes = '<span style="color:red;">Merci de siasir moin de 50 caractères </span>';
+    }
+
+    if (validatingNomberOfChar($country, 30) === false){
+        return $ErrorNomberOfCharOfCountry = '<span style="color:red;">Merci de siasir moin de 30 caractères </span>';
+    }
+    if (validatingNomberOfChar($region, 30) === false){
+        return $ErrorNomberOfCharOfRegion = '<span style="color:red;">Merci de siasir moin de 30 caractères </span>';
+    }
+    if (validatingNomberOfChar($picture['name'], 100) === false){
+        return $ErrorNomberOfCharPicture = '<span style="color:red;">Merci de siasir moin de 100 caractères sur le nom d\'image</span>';
+    }
     if (validatingBottelYear($year) === false) {
         return $ErrorYear = '<span style="color:red;">Merci de siasir une année entre 1900 et '. (date('Y')-1) .'</span>';
     }

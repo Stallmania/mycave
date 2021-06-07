@@ -13,10 +13,27 @@ if (isset($_POST['save'])) {
     $description = ScriptingTesting($_POST['description']);
     $picture =($_FILES['imageBottel']);
 
-    $fields = [$name, $year, $country, $region];
-
-    if (in_array('',$fields)) {
+    $fieldsRequired = [$name, $year, $country, $region];
+    if (in_array('',$fieldsRequired)) {
         return $ErrorEmptyInputField = '<span style="color:red;">Merci de compléter les champs manquants</span>';
+    }
+
+    if (validatingNomberOfChar($name) === false){
+        return $ErrorNomberOfCharOfName = '<span style="color:red;">Merci de siasir moins de 50 caractères </span>';
+    }
+
+    if (validatingNomberOfChar($grapes) === false){
+        return $ErrorNomberOfCharOfGrapes = '<span style="color:red;">Merci de siasir moins de 50 caractères </span>';
+    }
+
+    if (validatingNomberOfChar($country, 30) === false){
+        return $ErrorNomberOfCharOfCountry = '<span style="color:red;">Merci de siasir moins de 30 caractères </span>';
+    }
+    if (validatingNomberOfChar($region, 30) === false){
+        return $ErrorNomberOfCharOfRegion = '<span style="color:red;">Merci de siasir moins de 30 caractères </span>';
+    }
+    if (validatingNomberOfChar($picture['name'], 100) === false){
+        return $ErrorNomberOfCharPicture = '<span style="color:red;">Merci de siasir moins de 100 caractères sur le nom d\'image</span>';
     }
 
     if (validatingBottelYear($year) === false) {
