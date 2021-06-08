@@ -6,7 +6,7 @@ ob_start();
 <div class="card p-4 m-4">
   <div class="row g-5 mt-0">
     <div class="col-md-6">
-      <img src="public/img/<?=$bottle['picture']?>"  alt="wine-picture">
+      <img src="public/img/<?=$bottle['picture']?>"  alt="wine-picture" style="max-width:200px;">
     </div>
     <div class="col-md-6">
       <div class="card-body">

@@ -1,5 +1,4 @@
 <?php
-$pageTitle = 'Ajouter un Administrateur';
 require_once('src/controllers/add_admin.php');
 
 ob_start();

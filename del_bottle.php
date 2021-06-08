@@ -1,5 +1,4 @@
 <?php
-$pageTitle = 'Supprimer une bouteille';
 require_once('src/controllers/del_bottle.php');
 
 ob_start();

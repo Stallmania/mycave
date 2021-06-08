@@ -1,5 +1,4 @@
 <?php
-$pageTitle = 'Ajouter une bouteille';
 require_once('src/controllers/add_bottle.php');
 
 ob_start();

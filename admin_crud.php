@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-$pageTitle = 'Liste des Administrateurs';
+
 require_once('src/models/administrator.php');
 $admins = getAdminList();
 $JustOneAdmin = false;

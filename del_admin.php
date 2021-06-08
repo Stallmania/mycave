@@ -1,7 +1,5 @@
 <?php
-$pageTitle = 'Supprimer un utilisateur';
 require_once('src/controllers/del_admin.php');
-
 ob_start();
 ?>
 

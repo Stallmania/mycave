@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Editer une bouteille';
+
 require_once('src/controllers/upd_bottle.php');
 
 ob_start();
@@ -11,7 +11,7 @@ ob_start();
     <h1 class="text-primary text-uppercase">modifier les information sur une bouteille</h1>
     <form action="upd_bottle.php?id_bottle=<?=$bottle['id_bottle'] ?>" method="post" enctype="multipart/form-data">
         <div class="mb-3">
-            <img src="public/img/<?=$bottle['picture'] ?>" alt="picture">
+            <img src="public/img/<?=$bottle['picture'] ?>" alt="picture" style="max-width:200px;">
         </div>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingName" value="<?=$bottle['name'] ?>" name="name" placeholder="Nom" required>
@@ -45,7 +45,7 @@ ob_start();
         </div>
         <div class="mt-3">
             <label for="image" class="form-label">Changer l'image</label>
-            <input class="form-control" type="file" id="image" name="imageBottel">
+            <input class="form-control" type="file" id="image" name="imageBottel" >
         </div>
         <?php if (isset($ErrorNomberOfCharPicture)) {echo "$ErrorNomberOfCharPicture";} ?>
         <?php if (isset($ErrorExtension)) {echo "$ErrorExtension";} ?>

@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Listes des bouteilles';
+
 require_once('src/controllers/session_control.php');
 forecer_utilisateur_connceter();
 require_once('src/models/cave.php');
