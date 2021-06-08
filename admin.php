@@ -1,5 +1,5 @@
 <?php
-require_once('src/controllers/login.php');
+require_once('src/controllers/admin.php');
 ob_start();
 if(isset($ErrorMessage)){
    echo $ErrorMessage ;
@@ -12,7 +12,7 @@ if(isset($ErrorMessage)){
   </div>
   <div class="col-md-6">
     <div class="card bg-white p-3">
-        <form action="login.php" method="post">
+        <form action="admin.php" method="post">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="admin" name="admin">
                 <label for="name">Nom</label>

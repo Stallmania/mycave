@@ -1,5 +1,4 @@
 <?php
-
 try {
 
     $pdo = new PDO(
@@ -17,9 +16,7 @@ try {
 }
 ?>
 <?php
-/*
-
-try {
+/* try {
 
     $pdo = new PDO(
         'mysql:host=localhost;dbname=id16718210_mycavedb;charset=utf8',
@@ -33,5 +30,5 @@ try {
 } catch (\PDOException $messageErrorConnection) {
 
     echo $messageErrorConnection->getMessage();
-}
-*/?>
+} */
+?>

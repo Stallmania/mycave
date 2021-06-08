@@ -9,7 +9,7 @@ function est_conncter():bool{
   
 function forecer_utilisateur_connceter():void{
     if (!est_conncter()) {
-        header('Location: /login.php');
+        header('Location: /admin.php');
         exit();
     }
 }

@@ -15,6 +15,6 @@ $tabPageAdmin = [
 $res = array_search($currentPage, $tabPageAdmin);
 
 if($res !== false && !isset($_SESSION['role'])){
-    header('Location: /login.php');
+    header('Location: /admin.php');
     exit;
 }
