@@ -14,7 +14,7 @@ ob_start();
         <span class="card-title fs-2 fw-bold"><?=$bottle['year']?></span>
         <h3 class="card-title fs-3"><?=$bottle['country']?></h3>
         <h4 class="card-title fs-3">Région: <?=$bottle['region']?></h4>
-        <h5 class="card-title fs-4">Grappe: <?=$bottle['grapes']?></h5>
+        <h5 class="card-title fs-4">Cépage: <?=$bottle['grapes']?></h5>
         <p class="card-text">description:</br><?=$bottle['description']?></p>
       </div>
     </div>

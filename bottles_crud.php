@@ -10,11 +10,10 @@ $pages = nbOfPages();
 $currentPageOfBottles = currentPage();
 ob_start();
 ?>
-<div style="margin: 10px 0;">
-    <a href="add_bottle.php" class="btn btn-primary m-1 sticky-top" style="border: 1px solid white ;">Ajouter une bouteille</a>
-
+<div style="margin: 20px 0;">
     <a href="admin_crud.php" class="btn btn-dark m-1" style="border: 1px solid white ;">Gestion des administrateurs</a>
 </div>
+<a href="add_bottle.php" class="btn btn-primary m-1" style="border: 1px solid white ;">Ajouter une bouteille</a>
 
 
 <?php foreach ($bottles as $key=>$bottle) : ?>
@@ -28,7 +27,7 @@ ob_start();
                     <ul class="list-group">
                         <li class="list-group-item"><strong>Nom </strong><?= $bottle['name'] ?></li>
                         <li class="list-group-item"><strong>Année </strong><?= $bottle['year'] ?></li>
-                        <li class="list-group-item"><strong>Cépage </strong><?= $bottle['grapes'] ?></li>
+                        <li class="list-group-item"><strong>grappe </strong><?= $bottle['grapes'] ?></li>
                         <li class="list-group-item"><strong>Pays </strong><?= $bottle['country'] ?></li>
                         <li class="list-group-item"><strong>Région </strong><?= $bottle['region'] ?></li>
                     </ul>
