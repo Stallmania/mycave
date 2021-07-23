@@ -22,7 +22,7 @@ ob_start();
         <?php if (isset($ErrorYear)) {echo "$ErrorYear";} ?>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingName" name="grapes" placeholder="grapes">
-            <label for="floatingName">grappe</label>
+            <label for="floatingName">Cépage</label>
         </div>
         <?php if (isset($ErrorNomberOfCharOfGrapes)) {echo "$ErrorNomberOfCharOfGrapes";} ?>
         <div class="form-floating">

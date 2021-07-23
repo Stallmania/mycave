@@ -7,7 +7,7 @@ $admins = getAdminList();
 $JustOneAdmin = false;
 ?>
 <div style="display: flex; justify-content:space-between">
-    <a href="add_admin.php" class="btn btn-info m-1">Ajouter un administrateur</a>
+    <a href="add_admin.php" class="btn btn-info m-1" style="background-color:#88002D; color:white">Ajouter un administrateur</a>
     <a href="bottles_crud.php" class="btn btn-light m-1">Retour à l'édition des bouteilles</a>
 </div>
 <div class="row">
@@ -22,7 +22,7 @@ $JustOneAdmin = false;
         </div>
         <div class="col-md-6" >
             <div class="m-3 mt-4 text-center">
-                <a href="upd_admin.php?id_admin=<?= $admin['id_admin'] ?>" class="btn btn-info">Editer</a>
+                <a href="upd_admin.php?id_admin=<?= $admin['id_admin'] ?>" class="btn btn-info" style="background-color:white; color:#3e0018">Editer</a>
             </div>
             <?php  if($admin['id_admin'] != 1): ?>
             <div class="m-3 mt-4 text-center">

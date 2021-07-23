@@ -38,15 +38,15 @@ require_once('src/controllers/acl.php');
     <main class="container">
         <?php echo $content; ?>
     </main>
-    <div class="container-fluid">
-      <footer class="row"  style="background-color: rgb(0, 0, 0)">
+    <div class="container-fluid" >
+      <footer class="row"  style="background-color: rgb(0, 0, 0);padding: 30px 0;">
         <div class="col-md-4">
           <p class="text-center text-white">Pour nous contacter : support@mycave-amine.fr<br>Mycave SAS, 50 rue d'Hauteville, 75010 Paris<br>tél. : 01 76 39 00 60.</p>
         </div>
         <div class="col-md-4">
           <h5 class="text-center text-white">Conditions Générales d’Utilisation</h3>
           <h5 class="text-center text-white">Conditions Générales de Vente</h3>
-          <h5 class="text-center text-white">copy right © 2021 mycave-amine </h4>
+          <h5 class="text-center text-white">Copyright © 2021 mycave-amine </h4>
         </div>
         <div class="col-md-4">
               <?php if(isset($_SESSION['role'])): ?>

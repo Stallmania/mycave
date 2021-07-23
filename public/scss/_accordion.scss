@@ -9,7 +9,7 @@
   width: 100%;
   padding: $accordion-button-padding-y $accordion-button-padding-x;
   @include font-size($font-size-base);
-  color: $accordion-button-color;
+  color: #3e0018;
   text-align: left; // Reset button style
   background-color: $accordion-button-bg;
   border: $accordion-border-width solid $accordion-border-color;
@@ -22,7 +22,7 @@
   }
 
   &:not(.collapsed) {
-    color: $accordion-button-active-color;
+    color: #3e0018;
     background-color: $accordion-button-active-bg;
 
     &::after {

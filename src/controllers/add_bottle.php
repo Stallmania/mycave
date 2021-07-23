@@ -43,7 +43,7 @@ if (isset($_POST['save'])) {
     if($picture['name'] == ''){
         $picture['name'] = 'generic.jpg';
     }else {
-        $picture['name'] = uniqid() . $picture['name'];
+        $picture['name'] = uniqid().'_'. $picture['name'];
     }
 
     if (validatingImageExtension($picture) === false) {

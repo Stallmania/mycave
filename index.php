@@ -34,7 +34,7 @@ ob_start();
             <div class="accordion-body">
                 <ul class="list-group">
                   <?php foreach($years as $year) :?>
-                    <li class="list-group-item"><a href="index.php?year=<?= $year['year'] ?>" class=" text-decoration-none"><?= $year['year'] ?></a></li>
+                    <li class="list-group-item"><a href="index.php?year=<?= $year['year'] ?>" class=" text-decoration-none" style="color:#88002d"><?= $year['year'] ?></a></li>
                   <?php endforeach ?>
                 </ul>
             </div>
@@ -50,7 +50,7 @@ ob_start();
             <div class="accordion-body">
               <ul class="list-group">
                   <?php foreach($countries as $country) :?>
-                    <li class="list-group-item"><a href="index.php?country=<?= $country['country'] ?>"class=" text-decoration-none"><?= $country['country'] ?></a></li>
+                    <li class="list-group-item"><a href="index.php?country=<?= $country['country'] ?>"class=" text-decoration-none" style="color:#88002d"><?= $country['country'] ?></a></li>
                   <?php endforeach ?>
               </ul>
             </div>
@@ -66,7 +66,7 @@ ob_start();
             <div class="accordion-body">
                 <ul class="list-group">
                   <?php foreach($regions as $region) :?>
-                    <li class="list-group-item"><a href="index.php?region=<?= $region['region'] ?>"class=" text-decoration-none"><?= $region['region'] ?></a></li>
+                    <li class="list-group-item"><a href="index.php?region=<?= $region['region'] ?>"class=" text-decoration-none" style="color:#88002d"><?= $region['region'] ?></a></li>
                   <?php endforeach ?>
                 </ul>
             </div>

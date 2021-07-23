@@ -12,7 +12,6 @@ if(isset($_GET['id_admin']) && ($_GET['id_admin']) != 1){
 
 }else{
     $isDeleted = true;
-
 }
 if ($isDeleted) {
 

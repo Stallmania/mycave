@@ -39,7 +39,7 @@ if(isset($_POST['modifier'])){
     $updateValues = [
         'firstName' => $firstName,
         'lastName' => $lastName,
-        'email' => $email,
+        'email' => strtolower($email),
         'phone' => $phone,
         'password' => password_hash($pass,PASSWORD_DEFAULT)
     ];

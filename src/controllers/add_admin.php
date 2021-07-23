@@ -21,7 +21,7 @@ if (isset($_POST['save'])) {
     if (validatingNomberOfChar($lastName,30) === false){
         return $ErrorNomberOfCharOfLastName = '<span style="color:red;">Merci de siasir moins de 30 caractères </span>';
     }
-
+    
     if((validatingEmail($email) === false) or (validatingNomberOfChar($email,50) === false)) {
         return $ErrorEmail = '<span style="color:red;">Merci de renseigner un email valide (moins de 50 caractères) !</span>';
     }
@@ -38,7 +38,7 @@ if (isset($_POST['save'])) {
     $adminleValues = [
         'firstName' => $firstName,
         'lastName' => $lastName,
-        'email' => $email,
+        'email' => strtolower($email),
         'phone' => $phone,
         'password' => password_hash($pass,PASSWORD_DEFAULT)
     ];

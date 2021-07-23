@@ -4462,7 +4462,7 @@ fieldset:disabled .btn {
   width: 100%;
   padding: 1rem 1.25rem;
   font-size: 1rem;
-  color: #212529;
+  color: #3e0018;
   text-align: left;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -4482,7 +4482,7 @@ fieldset:disabled .btn {
 }
 
 .accordion-button:not(.collapsed) {
-  color: #0c63e4;
+  color: #3e0018;
   background-color: #e7f1ff;
 }
 
